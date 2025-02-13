@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="background-music" autoplay loop>
+    <source src="tujh.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="content">
+    <!-- Page 1 -->
+    <div id="page1" class="message-page">
+      <h1>Heyyyy</h1>
+      <p>Dear Patidev...As you know what day it is today...💖</p>
+      <button class="next-btn" onclick="nextPage(2)">Next</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="message-page" style="display:none;">
+      <p>Wah...Pta hai to wish kyu ni karte🙄</p>
+      <p>Huh...ye bhi mujhe hi karna padega...</p>
+      <button class="next-btn" onclick="nextPage(4)">Next</button>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="page4" class="message-page" style="display:none;">
+      <h1>🌹💖💕Happy Valentine's Day💕💖🌹</h1>
+      <p>"Every moment with you feels like a dream come true." 🌹</p>
+      <button class="next-btn" onclick="showPasswordForm()">Next</button>
+    </div>
+
+    <!-- Password Form -->
+    <div id="password-form" class="password-form" style="display:none;">
+      <h2>Please enter the password to see the special content</h2>
+      <input type="password" id="password" placeholder="Enter password">
+      <button onclick="checkPassword()">Submit</button>
+      <p id="error-message" style="color:red; display:none;">Incorrect password. Try again.</p>
+    </div>
+
+    <!-- Protected Content -->
+    <div id="protected-content" style="display:none;">
+      <h2>Special Photos and Messages 💌</h2>
+      <img src="p2.jpeg" alt="Special Photo 1" class="gallery-img">
+      <img src="p1.jpeg" alt="Special Photo 2" class="gallery-img">
+      <img src="p3.jpeg" alt="Special Photo 3" class="gallery-img">
+      <p>Thankyou for loving me and everything about me, thank you for accepting me, all my flaws and
+         mistakes that i made.. but u also make mistakes but thk hai choro 🤭I know we fight a lot but
+         thanks for always being my supporter, for caring about me, for tolerating me..🤣 💕💖🌹❤️</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
