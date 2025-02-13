@@ -6,6 +6,47 @@
   <title>Valentine's Day</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+<head>
+ <style>
+        /* Style for the mute button */
+        #mute-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+  <!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="tujh.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Mute/Unmute Button -->
+    <button id="mute-btn" onclick="toggleMute()">
+        🔊
+    </button>
+
+    <script>
+        var audio = document.getElementById("background-music");
+        var muteBtn = document.getElementById("mute-btn");
+
+        function toggleMute() {
+            if (audio.muted) {
+                audio.muted = false;
+                muteBtn.innerHTML = "🔊"; // Speaker ON icon
+            } else {
+                audio.muted = true;
+                muteBtn.innerHTML = "🔇"; // Speaker OFF icon
+            }
+        }
+    </script>
+</body>
 <body>
   <!-- Background Music -->
  <audio id="background-music" loop>
