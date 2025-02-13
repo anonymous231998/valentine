@@ -8,10 +8,17 @@
 </head>
 <body>
   <!-- Background Music -->
-  <audio id="background-music" autoplay loop>
-    <source src="tujh.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
+ <audio id="background-music" loop>
+        <source src="tujh.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener("click", function() {
+            var audio = document.getElementById("background-music");
+            audio.play().catch(error => console.log("Playback error:", error));
+        }, { once: true }); // Ensures it only runs once
+    </script>
 
   <div class="content">
     <!-- Page 1 -->
